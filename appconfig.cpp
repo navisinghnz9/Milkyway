@@ -26,5 +26,5 @@ AppConfig* AppConfig::Instance() {
  * @return NASA API key in QString object
  */
 QString AppConfig::GetNASAKey() {
-    return QProcessEnvironment::systemEnvironment().value("NASA_KEY", "KEY-NOT-FOUND");
+    return QProcessEnvironment::systemEnvironment().value("NASA_API_KEY", "KEY-NOT-FOUND");
 }
