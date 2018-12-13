@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "httpclient.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,6 +19,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    HttpClient *http;
 };
 
 #endif // MAINWINDOW_H

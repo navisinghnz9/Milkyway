@@ -6,9 +6,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    http = new HttpClient("", this);
+    http->GetAPOD();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    if (http) {
+        delete http;
+        http = nullptr;
+    }
 }
